@@ -7,7 +7,7 @@ class Payment < ApplicationRecord
     end
 
     def self.year_options
-        (Date.today.year..(Date.today.year+1)).to_a
+        (Date.today.year..(Date.today.year+10)).to_a
     end
 
     def process_payment
@@ -17,5 +17,6 @@ class Payment < ApplicationRecord
                                         amount: 1000,
                                         description: 'Premium',
                                         currency: 'usd'
+    end
 
 end
